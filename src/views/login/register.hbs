@@ -59,20 +59,27 @@
             </form>
         </div> --}}
 
-        <div class="mx-auto my-12 p-8 bg-white" style="border: 1px outset gray;">
-            <h1 class="">Register</h1>
-
-            <form action="" method="POST" class="mt-4">
-                <input type="text" name="name" placeholder="Name" class="" required>
-
-                <input type="email" name="email" placeholder="Email" class="" required>
-
-                <input type="password" name="password" placeholder="Password" class="" required>
-
-                <button type="submit" class="">Send</button>
-
+        <div class="container-md mx-auto bg-white my-12 p-8 mt-3 text-center d-flex justify-content-center" style="border: 1px outset rgba(206, 206, 206, 0.7);">
+            <form action="" method="POST" class="mt-4 d-flex flex-column">
+                {{!--<div class="col-6 mt-2" style="border: 1px solid red;">--}}
+                    <h1 class="text-center">Register</h1>
+                {{!--</div>--}}
+                <div class="col-6 mt-3"  style="width: 300px;"{{!--style="border: 1px solid red;"--}}>
+                    <input type="text" name="name" placeholder="Name" class="form-control" required>
+                </div>
+                <div class="col-6 mt-3"  style="width: 300px;"{{!--style="border: 1px solid red;"--}}>
+                    <input type="email" name="email" placeholder="Email" class="form-control" required>
+                </div>
+                <div class="col-6 mt-3"  style="width: 300px;"{{!--style="border: 1px solid red;"--}}>
+                    <input type="password" name="password" placeholder="Password" class="form-control" required>
+                </div>
+                <div class="col-6 mb-4 mt-4 text-center"  style="width: 300px;"{{!--style="border: 1px solid red;"--}}>
+                    <button type="submit" class="btn btn-primary px-4">Send</button>
+                </div>
                 {{#if error}}
-                    <p>* {{error}}</p>
+                    <div class="" style="border: 1px solid red;">
+                        <p>* {{error}}</p>
+                    </div>
                 {{/if}}
             </form>
         </div>

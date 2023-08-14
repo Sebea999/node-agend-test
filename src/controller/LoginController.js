@@ -10,7 +10,7 @@ function login(req, res) {
         // si ingreso le muestro el menu 
         res.redirect('/');
     }
-    res.render('login/index');
+    //res.render('login/index');
 }
 
 function auth(req, res) {
@@ -60,7 +60,7 @@ function register(req, res) {
         // si ingreso le muestro el menu 
         res.redirect('/');
     }
-    res.render('login/register');
+    //res.render('login/register');
 }
 
 function storeUser(req, res) {

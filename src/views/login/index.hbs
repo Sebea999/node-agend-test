@@ -8,18 +8,24 @@
     </head>
     <body class="bg-primary-subtle">
 
-        <div class="mx-auto my-12 p-8 bg-white" style="border: 1px outset gray;">
-            <h1 class="">Login</h1>
-
-            <form action="" method="POST" class="mt-4">
-                <input type="email" name="email" placeholder="Email" class="" required>
-
-                <input type="password" name="password" placeholder="Password" class="" required>
-
-                <button type="submit" class="">Send</button>
-
+        <div class="container-md mx-auto bg-white my-12 p-8 mt-3 text-center d-flex justify-content-center" style="border: 1px outset rgba(206, 206, 206, 0.7);">
+            <form action="" method="POST" class="mt-4 d-flex flex-column">
+                {{!--<div class="col-6 mt-2 text-center" style="border: 1px solid red;">--}}
+                    <h1 class="text-center">Login</h1>
+                {{!--</div>--}}
+                <div class="col-6 mt-3" style="width: 300px;">
+                    <input type="email" name="email" placeholder="Email" class="form-control" required>
+                </div>
+                <div class="col-6 mt-3" style="width: 300px;">
+                    <input type="password" name="password" placeholder="Password" class="form-control" required>
+                </div>
+                <div class="col-6 mb-4 mt-4 text-center" style="width: 300px;">
+                    <button type="submit" class="btn btn-success px-4">Send</button>
+                </div>
                 {{#if error}}
-                    <p>* {{error}}</p>
+                    <div class="" style="border: 1px solid red;">
+                        <p>* {{error}}</p>
+                    </div>
                 {{/if}}
             </form>
         </div>
